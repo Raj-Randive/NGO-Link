@@ -8,6 +8,7 @@ class ScaffoldBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String TextFieldData;
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -74,6 +75,9 @@ class ScaffoldBody extends StatelessWidget {
                     ]
                 ),
                 child: TextField(
+                  onChanged: (data) {
+                    TextFieldData=data;
+                  },
                   decoration: InputDecoration(
                     icon: Icon(Icons.search),
                     hintText: "Search",
@@ -112,7 +116,7 @@ class ScaffoldBody extends StatelessWidget {
                 ),
                 child: SingleChildScrollView(
                   child: Padding(//Scrollbar init
-                    padding: const EdgeInsets.all(30),
+                    padding: const EdgeInsets.all(30),////
                     child: MainScreenHomeStart(),
                   ),
                 ),

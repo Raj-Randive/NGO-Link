@@ -41,7 +41,7 @@ class NgoNearYouCard extends StatelessWidget {
                         image: NetworkImage(ngoImages[0]),
                         fit: BoxFit.fill,
                       ),
-                      borderRadius: const BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
                       ),
@@ -53,23 +53,19 @@ class NgoNearYouCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Text(ngoName,
-                            style: TextStyle(
-                              color: Colors.black.withOpacity(0.8),
-                              fontFamily: "FiraSans",
-                              fontSize: 19,
-                            ),
-                          ),
-                          const Spacer(),
-                          Text(
-                            "($ngoSector)",
-                            style: TextStyle(
-                              color: Colors.black.withOpacity(0.5),
-                            ),
-                          )
-                        ],
+                      Text(ngoName,
+                        style: TextStyle(
+                          color: Colors.black.withOpacity(0.8),
+                          fontFamily: "FiraSans",
+                          fontSize: 19,
+                        ),
+                      ),
+                      // const Spacer(),
+                      Text(
+                        "($ngoSector)",
+                        style: TextStyle(
+                          color: Colors.black.withOpacity(0.5),
+                        ),
                       ),
                       Text(
                         "$ngoCity, $ngoState, $ngoCountry",

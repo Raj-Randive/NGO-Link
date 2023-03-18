@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 import 'package:ngo_link/Home_Page/navigation_bar/controller.dart';
+import 'package:ngo_link/category_page.dart';
+import 'package:ngo_link/user_profile_page.dart';
 
 
 class Nav_bar extends StatefulWidget {
@@ -68,6 +70,7 @@ class _Nav_barState extends State<Nav_bar> {
                     Duration(seconds: 1),
                         () {
                       usertigger.change(false);
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => UserProfilePage()));
                     },
                   );
                   // print("HH");
@@ -121,20 +124,22 @@ class _Nav_barState extends State<Nav_bar> {
                     Duration(seconds: 1),
                         () {
                       belltigger.change(false);
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => CategoryPage()));
                     },
-                  ); // print("HH");
+                  );
+
                 },
                 child: SizedBox(
                   height: 36,
                   width: 36,
                   child: RiveAnimation.asset(
                     "assets/rive_file/nav_icons.riv",
-                    artboard: "BELL",
+                    artboard: "DASHBOARD",
                     onInit: (artboard) {
                       StateMachineController controller =
                       RiveController.getRiveController(artboard,
-                          stateMachineName: "BELL_Interactivity");
-                      belltigger = controller.findSMI("active") as SMIBool;
+                          stateMachineName: "State Machine 1");
+                      belltigger = controller.findSMI("isActive") as SMIBool;
                     },
                   ),
                 ),

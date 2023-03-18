@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ngo_link/Home_Page/ngo_near_you_card.dart';
-import 'package:ngo_link/Home_Page/categories.dart';
 import 'package:get/get.dart';
 
 
@@ -19,6 +18,8 @@ class _MainScreenHomeStartState extends State<MainScreenHomeStart> {
   var collection=FirebaseFirestore.instance.collection("NGOs");
   late List<Map<String,dynamic>> items ;
   bool isLoaded=false;
+    List<String> category=["All","Education","Health Care","Rural Development","Disaster Management","Women Empowerment","Old Age Home","Differently Able","Gender Equality"];
+  int selectedIndex=0;
   _incrementCounter() async{
     List<Map<String,dynamic>> tempList=[];
     var data= await collection.get();
@@ -51,7 +52,40 @@ class _MainScreenHomeStartState extends State<MainScreenHomeStart> {
             ),
           ),
         ),
-        Categories(),
+
+        SizedBox(
+          height: 50,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: category.length,
+            itemBuilder: (
+                context,index)=> Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GestureDetector(
+                onTap: (){
+                  setState(() {
+                    selectedIndex=index;
+                  });
+                },
+                child: Container(
+                  height: 20,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black),
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: selectedIndex==index ? Colors.blue[200] : Colors.white,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      category[index],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+
         SizedBox(height: 20,),
 
         SingleChildScrollView(
@@ -97,14 +131,13 @@ class _MainScreenHomeStartState extends State<MainScreenHomeStart> {
               ),
 
 
-
               isLoaded?SizedBox(
                 height: 270,
                 child: ListView.builder(
                   itemCount: items.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context,index) {
-                    return Padding(
+                    return items[index]["Sector"]==category[selectedIndex]?Padding(
                     padding: const EdgeInsets.only(bottom: 5),
                     child: Row(
                       children: [
@@ -124,14 +157,33 @@ class _MainScreenHomeStartState extends State<MainScreenHomeStart> {
                         ),
                       ],
                     ),
-                  );
+                  ):category[selectedIndex]=="All"?Padding(
+                      padding: const EdgeInsets.only(bottom: 5),
+                      child: Row(
+                        children: [
+                          NgoNearYouCard(
+                            ngoImages: items[index]["Images"],
+                            ngoName: "${items[index]["Name"]??"untitled"}",
+                            ngoSector: "${items[index]["Sector"]??"untitled"}",
+                            ngoCity: "${items[index]["City"]??"untitled"}",
+                            ngoState: "${items[index]["State"]??"untitled"}",
+                            ngoCountry: "${items[index]["Country"]??"untitled"}",
+                            ngoAbout: "${items[index]["About"]??"untitled"}",
+                            ngoAddress: "${items[index]["Address"]??"untitled"}",
+                            ngoPhoneNo: "${items[index]["PhoneNo"]??"untitled"}",
+                            ngoWebsiteLink: "${items[index]["Website"]??"untitled"}",
+                            ngoMapLoc: "${items[index]["GMapLocation"]??"untitled"}",
+
+                          ),
+                        ],
+                      ),
+                    ):SizedBox(height: 0,);
                 }
                 ),
               ):Text("No Data"),
             ],
           ),
         ),
-
       ],
     );
   }

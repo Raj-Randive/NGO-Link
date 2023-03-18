@@ -12,7 +12,6 @@ class NGOCardPage extends StatefulWidget {
   NGOCardPage({Key? key,required this.ngoImages,required this.ngoName,required this.ngoSector,required this.ngoCity,required this.ngoState,required this.ngoCountry,required this.ngoAbout,required this.ngoAddress,required this.ngoPhoneNo,required this.ngoWebsiteLink,required this.ngoMapLoc}) : super(key: key);
 
   @override
-  // ignore: no_logic_in_create_state, unnecessary_this
   State<NGOCardPage> createState() => _NGOCardPageState(ngoName: this.ngoName,ngoSector: this.ngoSector,ngoCity: this.ngoCity,ngoState: this.ngoState,ngoCountry: this.ngoCountry,ngoAbout: this.ngoAbout,ngoAddress: this.ngoAddress,ngoPhoneNo: this.ngoPhoneNo,ngoWebsiteLink: this.ngoWebsiteLink,ngoMapLoc: this.ngoMapLoc,ngoImages: this.ngoImages);
 }
 
