@@ -27,11 +27,11 @@ class _Nav_barState extends State<Nav_bar> {
       ),
       child: Container(
           height: 55,
-          padding: EdgeInsets.all(12),
-          margin: EdgeInsets.fromLTRB(18, 0, 18, 12),
+          padding: const EdgeInsets.all(12),
+          margin: const EdgeInsets.fromLTRB(18, 0, 18, 12),
           decoration: BoxDecoration(
             color: CupertinoColors.darkBackgroundGray.withOpacity(0.8),
-            borderRadius: BorderRadius.all(Radius.circular(24)),
+            borderRadius: const BorderRadius.all(Radius.circular(24)),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,7 +40,7 @@ class _Nav_barState extends State<Nav_bar> {
                 onTap: () {
                   hometigger.change(true);
                   Future.delayed(
-                    Duration(seconds: 1),
+                    const Duration(seconds: 1),
                         () {
                       hometigger.change(false);
                     },
@@ -67,10 +67,10 @@ class _Nav_barState extends State<Nav_bar> {
                 onTap: () {
                   usertigger.change(true);
                   Future.delayed(
-                    Duration(seconds: 1),
+                    const Duration(seconds: 1),
                         () {
                       usertigger.change(false);
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => UserProfilePage()));
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const UserProfilePage()));
                     },
                   );
                   // print("HH");
@@ -95,7 +95,7 @@ class _Nav_barState extends State<Nav_bar> {
                 onTap: () {
                   chattigger.change(true);
                   Future.delayed(
-                    Duration(seconds: 1),
+                    const Duration(seconds: 1),
                         () {
                       chattigger.change(false);
                     },
@@ -121,10 +121,10 @@ class _Nav_barState extends State<Nav_bar> {
                 onTap: () {
                   belltigger.change(true);
                   Future.delayed(
-                    Duration(seconds: 1),
+                    const Duration(seconds: 1),
                         () {
                       belltigger.change(false);
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => CategoryPage()));
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage()));
                     },
                   );
 

@@ -58,86 +58,83 @@ class _UserProfilePageState extends State<UserProfilePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  // padding: EdgeInsets.fromLTRB(0, 200, 0, 0),
-                  child: Center(
-                    child: Stack(
-                      children: [
-                        CircleAvatar(
-                          radius: 80,
-                          child: _image != null
-                              ? Image.file(
-                                  _image!,
-                                  width: 200,
-                                  height: 200,
-                                  fit: BoxFit.cover,
-                                )
-                              : Image.asset("images/Logo1.png"),
-                        ),
-                        Positioned(
-                          top: 120,
-                          right: 0,
-                          child: InkWell(
-                            onTap: () {
-                              showModalBottomSheet(
-                                  context: context,
-                                  builder: (BuildContext context) {
-                                    return Container(
-                                      height: 100,
-                                      width: MediaQuery.of(context).size.width,
-                                      margin: const EdgeInsets.symmetric(
-                                          horizontal: 20, vertical: 20),
-                                      child: Column(
-                                        children: [
-                                          const Text(
-                                            "Choose Your Profile image",
-                                            style: TextStyle(
-                                              fontSize: 20,
+                Center(
+                  child: Stack(
+                    children: [
+                      CircleAvatar(
+                        radius: 80,
+                        child: _image != null
+                            ? Image.file(
+                                _image!,
+                                width: 200,
+                                height: 200,
+                                fit: BoxFit.cover,
+                              )
+                            : Image.asset("images/Logo1.png"),
+                      ),
+                      Positioned(
+                        top: 120,
+                        right: 0,
+                        child: InkWell(
+                          onTap: () {
+                            showModalBottomSheet(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return Container(
+                                    height: 100,
+                                    width: MediaQuery.of(context).size.width,
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 20, vertical: 20),
+                                    child: Column(
+                                      children: [
+                                        const Text(
+                                          "Choose Your Profile image",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 20,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          children: [
+                                            ElevatedButton.icon(
+                                              onPressed: getCameraImage,
+                                              style: ElevatedButton.styleFrom(
+                                                backgroundColor:
+                                                    Colors.blue.shade500,
+                                                // foregroundColor: Colors.tealAccent
+                                              ),
+                                              icon: const Icon(Icons.camera),
+                                              label: const Text("Camera"),
                                             ),
-                                          ),
-                                          const SizedBox(
-                                            height: 20,
-                                          ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              ElevatedButton.icon(
-                                                onPressed: getCameraImage,
-                                                style: ElevatedButton.styleFrom(
-                                                  backgroundColor:
-                                                      Colors.blue.shade500,
-                                                  // foregroundColor: Colors.tealAccent
-                                                ),
-                                                icon: const Icon(Icons.camera),
-                                                label: const Text("Camera"),
+                                            ElevatedButton.icon(
+                                              onPressed: getGalleryImage,
+                                              style: ElevatedButton.styleFrom(
+                                                backgroundColor:
+                                                    Colors.blue.shade500,
+                                                // foregroundColor: Colors.tealAccent
                                               ),
-                                              ElevatedButton.icon(
-                                                onPressed: getGalleryImage,
-                                                style: ElevatedButton.styleFrom(
-                                                  backgroundColor:
-                                                      Colors.blue.shade500,
-                                                  // foregroundColor: Colors.tealAccent
-                                                ),
-                                                icon: const Icon(Icons.image),
-                                                label: const Text("Gallery"),
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                    );
-                                  });
-                            },
-                            child: Icon(
-                              Icons.camera_enhance_rounded,
-                              color: Colors.blue.shade500,
-                              size: 40,
-                            ),
+                                              icon: const Icon(Icons.image),
+                                              label: const Text("Gallery"),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  );
+                                });
+                          },
+                          child: Icon(
+                            Icons.camera_enhance_rounded,
+                            color: Colors.blue.shade500,
+                            size: 40,
                           ),
-                        )
-                      ],
-                    ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 const SizedBox(

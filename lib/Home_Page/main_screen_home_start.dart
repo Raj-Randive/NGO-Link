@@ -1,8 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ngo_link/Home_Page/ngo_near_you_card.dart';
-import 'package:get/get.dart';
-
 
 class MainScreenHomeStart extends StatefulWidget {
   const MainScreenHomeStart({
@@ -71,7 +69,7 @@ class _MainScreenHomeStartState extends State<MainScreenHomeStart> {
                   height: 20,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
                     color: selectedIndex==index ? Colors.blue[200] : Colors.white,
                   ),
                   child: Padding(
@@ -86,7 +84,7 @@ class _MainScreenHomeStartState extends State<MainScreenHomeStart> {
           ),
         ),
 
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
 
         SingleChildScrollView(
           child: Column(
@@ -177,10 +175,10 @@ class _MainScreenHomeStartState extends State<MainScreenHomeStart> {
                           ),
                         ],
                       ),
-                    ):SizedBox(height: 0,);
+                    ):const SizedBox(height: 0,);
                 }
                 ),
-              ):Text("No Data"),
+              ):const Text("No Data"),
             ],
           ),
         ),
