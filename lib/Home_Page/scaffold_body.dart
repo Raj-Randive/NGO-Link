@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:ngo_link/Home_Page/main_screen_home_start.dart';
 
 class ScaffoldBody extends StatelessWidget {
