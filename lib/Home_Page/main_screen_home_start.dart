@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ngo_link/Home_Page/ngo_near_you_card.dart';
 import 'package:ngo_link/Home_Page/categories.dart';
+import 'package:get/get.dart';
+
 
 class MainScreenHomeStart extends StatefulWidget {
   const MainScreenHomeStart({
@@ -49,8 +51,8 @@ class _MainScreenHomeStartState extends State<MainScreenHomeStart> {
             ),
           ),
         ),
-        const Categories(),
-        const SizedBox(height: 20,),
+        Categories(),
+        SizedBox(height: 20,),
 
         SingleChildScrollView(
           child: Column(
@@ -103,22 +105,28 @@ class _MainScreenHomeStartState extends State<MainScreenHomeStart> {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context,index) {
                     return Padding(
-                      padding: const EdgeInsets.only(bottom: 5),
-                      child: Row(
-                        children: [
-                          NgoNearYouCard(
-                            ngoImage: "images/MaaFoundation.png",
-                            ngoName: "${items[index]["Name"]??"untitled"}",
-                            ngoSector: "${items[index]["Sector"]??"untitled"}",
-                            ngoCity: "${items[index]["City"]??"untitled"}",
-                            ngoState: "${items[index]["State"]??"untitled"}",
-                            ngoCountry: "${items[index]["Country"]??"untitled"}",
-                          ),
-                        ],
-                      ),
-                    );
-                  }
-                  ),
+                    padding: const EdgeInsets.only(bottom: 5),
+                    child: Row(
+                      children: [
+                        NgoNearYouCard(
+                          ngoImages: items[index]["Images"],
+                          ngoName: "${items[index]["Name"]??"untitled"}",
+                          ngoSector: "${items[index]["Sector"]??"untitled"}",
+                          ngoCity: "${items[index]["City"]??"untitled"}",
+                          ngoState: "${items[index]["State"]??"untitled"}",
+                          ngoCountry: "${items[index]["Country"]??"untitled"}",
+                          ngoAbout: "${items[index]["About"]??"untitled"}",
+                          ngoAddress: "${items[index]["Address"]??"untitled"}",
+                          ngoPhoneNo: "${items[index]["PhoneNo"]??"untitled"}",
+                          ngoWebsiteLink: "${items[index]["Website"]??"untitled"}",
+                          ngoMapLoc: "${items[index]["GMapLocation"]??"untitled"}",
+
+                        ),
+                      ],
+                    ),
+                  );
+                }
+                ),
               ):Text("No Data"),
             ],
           ),

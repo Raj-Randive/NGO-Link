@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:ngo_link/NGO_Card_Pages/ngo_card_page.dart';
 
 class NgoNearYouCard extends StatelessWidget {
-  NgoNearYouCard({super.key,required this.ngoImage,required this.ngoName,required this.ngoSector,required this.ngoCity,required this.ngoState,required this.ngoCountry});
+  NgoNearYouCard({super.key,required this.ngoImages,required this.ngoName,required this.ngoSector,required this.ngoCity,required this.ngoState,required this.ngoCountry,required this.ngoAbout,required this.ngoAddress,required this.ngoPhoneNo,required this.ngoWebsiteLink,required this.ngoMapLoc});
 
-
-  String ngoImage,ngoName,ngoCity,ngoState,ngoCountry,ngoSector;
+  List ngoImages=[];
+  String ngoName,ngoCity,ngoState,ngoCountry,ngoSector,ngoAbout,ngoAddress,ngoWebsiteLink,ngoPhoneNo,ngoMapLoc;
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -14,7 +14,7 @@ class NgoNearYouCard extends StatelessWidget {
       children: [
         TextButton(
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => NGOCardPage(ngoName: ngoName, ngoCity: ngoCity, ngoCountry: ngoCountry, ngoSector: ngoSector, ngoState: ngoState,)));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => NGOCardPage(ngoName: ngoName, ngoCity: ngoCity, ngoCountry: ngoCountry, ngoSector: ngoSector, ngoState: ngoState,ngoAbout: ngoAbout,ngoAddress: ngoAddress,ngoPhoneNo: ngoPhoneNo,ngoWebsiteLink: ngoWebsiteLink,ngoMapLoc: ngoMapLoc,ngoImages: ngoImages,)));
           },
           child: Container(
             height: 250,
@@ -38,7 +38,7 @@ class NgoNearYouCard extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(ngoImage),
+                        image: NetworkImage(ngoImages[0]),
                         fit: BoxFit.fill,
                       ),
                       borderRadius: BorderRadius.only(
@@ -74,8 +74,8 @@ class NgoNearYouCard extends StatelessWidget {
                       Text(
                         "$ngoCity, $ngoState, $ngoCountry",
                         style: TextStyle(
-                          color: Colors.black.withOpacity(0.6),
-                          fontSize: 12
+                            color: Colors.black.withOpacity(0.6),
+                            fontSize: 12
                         ),
                       )
                     ],
