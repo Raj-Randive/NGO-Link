@@ -1,40 +1,76 @@
 {
   "project_info": {
-    "project_number": "1071220220529",
-    "project_id": "ngo-link-new",
-    "storage_bucket": "ngo-link-new.appspot.com"
+    "project_number": "829165328879",
+    "project_id": "ngo-link-6b71f",
+    "storage_bucket": "ngo-link-6b71f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1071220220529:android:f141cc2ad251af5ae271d0",
+        "mobilesdk_app_id": "1:829165328879:android:ab5db280af76d04a873e1a",
         "android_client_info": {
           "package_name": "com.example.ngo_link"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1071220220529-flbldjrk0u365rq9ub0hprriss7csv3f.apps.googleusercontent.com",
+          "client_id": "829165328879-s2bqr74h7ourbdmq3g8ecr2uepopqvfd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC_5qZO5gnUwcScwgaG4gDPrLxD15y-6FQ"
+          "current_key": "AIzaSyCT4F9oVGC3vjF1zVSbtZtMH9k-b2dYK_Y"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1071220220529-flbldjrk0u365rq9ub0hprriss7csv3f.apps.googleusercontent.com",
+              "client_id": "829165328879-s2bqr74h7ourbdmq3g8ecr2uepopqvfd.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "1071220220529-vp1o46okkbtv09a1manlj2972tubn2i2.apps.googleusercontent.com",
+              "client_id": "829165328879-9gqjvoeugg51a0a120465r5llli2u0n8.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.ngoLink"
+                "bundle_id": "com.example.ngoLinkApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829165328879:android:cbdeaf209f1efb0b873e1a",
+        "android_client_info": {
+          "package_name": "com.example.ngo_link_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829165328879-s2bqr74h7ourbdmq3g8ecr2uepopqvfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT4F9oVGC3vjF1zVSbtZtMH9k-b2dYK_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829165328879-s2bqr74h7ourbdmq3g8ecr2uepopqvfd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "829165328879-9gqjvoeugg51a0a120465r5llli2u0n8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ngoLinkApp"
               }
             }
           ]

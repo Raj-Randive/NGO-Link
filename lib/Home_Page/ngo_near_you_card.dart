@@ -41,7 +41,7 @@ class NgoNearYouCard extends StatelessWidget {
                         image: NetworkImage(ngoImages[0]),
                         fit: BoxFit.fill,
                       ),
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
                       ),
