@@ -75,6 +75,7 @@ flutter:
     - images/
     - images/category_images/
     - assets/rive_file/nav_icons.riv
+    - sidebar_icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
