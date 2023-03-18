@@ -44,39 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDKkWxSntTIuNpNbdi5By8g28MetvpEGm8',
-    appId: '1:1071220220529:web:a5b8ae5f28924de2e271d0',
-    messagingSenderId: '1071220220529',
-    projectId: 'ngo-link-new',
-    authDomain: 'ngo-link-new.firebaseapp.com',
-    storageBucket: 'ngo-link-new.appspot.com',
+    apiKey: 'AIzaSyAysEHeYWeaPdviFjQ2w6mMEfpBtWM_w7s',
+    appId: '1:829165328879:web:2a4e162b1fd0228f873e1a',
+    messagingSenderId: '829165328879',
+    projectId: 'ngo-link-6b71f',
+    authDomain: 'ngo-link-6b71f.firebaseapp.com',
+    storageBucket: 'ngo-link-6b71f.appspot.com',
+    measurementId: 'G-QD9CTEZETZ',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC_5qZO5gnUwcScwgaG4gDPrLxD15y-6FQ',
-    appId: '1:1071220220529:android:f141cc2ad251af5ae271d0',
-    messagingSenderId: '1071220220529',
-    projectId: 'ngo-link-new',
-    storageBucket: 'ngo-link-new.appspot.com',
+    apiKey: 'AIzaSyCT4F9oVGC3vjF1zVSbtZtMH9k-b2dYK_Y',
+    appId: '1:829165328879:android:cbdeaf209f1efb0b873e1a',
+    messagingSenderId: '829165328879',
+    projectId: 'ngo-link-6b71f',
+    storageBucket: 'ngo-link-6b71f.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCUIk9l8tKLTwTdcKNZZxMH7oE0H35sM0A',
-    appId: '1:1071220220529:ios:651b598130c8136ee271d0',
-    messagingSenderId: '1071220220529',
-    projectId: 'ngo-link-new',
-    storageBucket: 'ngo-link-new.appspot.com',
-    iosClientId: '1071220220529-vp1o46okkbtv09a1manlj2972tubn2i2.apps.googleusercontent.com',
-    iosBundleId: 'com.example.ngoLink',
+    apiKey: 'AIzaSyDuud_YuqSW5qCHYUMlhf1vWeAxyLI7ohU',
+    appId: '1:829165328879:ios:944baca1dcbda442873e1a',
+    messagingSenderId: '829165328879',
+    projectId: 'ngo-link-6b71f',
+    storageBucket: 'ngo-link-6b71f.appspot.com',
+    iosClientId: '829165328879-9gqjvoeugg51a0a120465r5llli2u0n8.apps.googleusercontent.com',
+    iosBundleId: 'com.example.ngoLinkApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCUIk9l8tKLTwTdcKNZZxMH7oE0H35sM0A',
-    appId: '1:1071220220529:ios:651b598130c8136ee271d0',
-    messagingSenderId: '1071220220529',
-    projectId: 'ngo-link-new',
-    storageBucket: 'ngo-link-new.appspot.com',
-    iosClientId: '1071220220529-vp1o46okkbtv09a1manlj2972tubn2i2.apps.googleusercontent.com',
-    iosBundleId: 'com.example.ngoLink',
+    apiKey: 'AIzaSyDuud_YuqSW5qCHYUMlhf1vWeAxyLI7ohU',
+    appId: '1:829165328879:ios:944baca1dcbda442873e1a',
+    messagingSenderId: '829165328879',
+    projectId: 'ngo-link-6b71f',
+    storageBucket: 'ngo-link-6b71f.appspot.com',
+    iosClientId: '829165328879-9gqjvoeugg51a0a120465r5llli2u0n8.apps.googleusercontent.com',
+    iosBundleId: 'com.example.ngoLinkApp',
   );
 }
